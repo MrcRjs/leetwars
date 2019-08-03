@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../Narcissistic_lib/Narcissistic.h
+
+/home/mrcrjs/PycharmProjects/codewars/narcissistic/main.cpp
+iostream
+-
+Narcissistic.h
+/home/mrcrjs/PycharmProjects/codewars/narcissistic/Narcissistic.h
+
