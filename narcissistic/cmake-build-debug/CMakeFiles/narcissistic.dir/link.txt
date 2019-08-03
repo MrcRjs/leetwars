@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/narcissistic.dir/main.cpp.o CMakeFiles/narcissistic.dir/narcissisticTest.cpp.o  -o narcissistic 

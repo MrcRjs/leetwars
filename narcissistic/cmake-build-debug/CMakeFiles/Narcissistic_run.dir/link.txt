@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Narcissistic_run.dir/main.cpp.o  -o Narcissistic_run Narcissistic_lib/libNarcissistic_lib.a 

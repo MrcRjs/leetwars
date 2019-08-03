@@ -1,0 +1,13 @@
+/home/mrcrjs/PycharmProjects/codewars/narcissistic/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/mrcrjs/PycharmProjects/codewars/narcissistic/cmake-build-debug/CMakeFiles/Narcissistic_run.dir
+/home/mrcrjs/PycharmProjects/codewars/narcissistic/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/mrcrjs/PycharmProjects/codewars/narcissistic/cmake-build-debug/Narcissistic_lib/CMakeFiles/rebuild_cache.dir
+/home/mrcrjs/PycharmProjects/codewars/narcissistic/cmake-build-debug/Narcissistic_lib/CMakeFiles/Narcissistic_lib.dir
+/home/mrcrjs/PycharmProjects/codewars/narcissistic/cmake-build-debug/Narcissistic_lib/CMakeFiles/edit_cache.dir
+/home/mrcrjs/PycharmProjects/codewars/narcissistic/cmake-build-debug/Google_tests/CMakeFiles/rebuild_cache.dir
+/home/mrcrjs/PycharmProjects/codewars/narcissistic/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir
+/home/mrcrjs/PycharmProjects/codewars/narcissistic/cmake-build-debug/Google_tests/CMakeFiles/edit_cache.dir
+/home/mrcrjs/PycharmProjects/codewars/narcissistic/cmake-build-debug/Google_tests/lib/CMakeFiles/rebuild_cache.dir
+/home/mrcrjs/PycharmProjects/codewars/narcissistic/cmake-build-debug/Google_tests/lib/CMakeFiles/gtest.dir
+/home/mrcrjs/PycharmProjects/codewars/narcissistic/cmake-build-debug/Google_tests/lib/CMakeFiles/edit_cache.dir
+/home/mrcrjs/PycharmProjects/codewars/narcissistic/cmake-build-debug/Google_tests/lib/CMakeFiles/gtest_main.dir

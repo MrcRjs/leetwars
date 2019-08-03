@@ -1,0 +1,2 @@
+/usr/bin/ar qc libNarcissistic_lib.a  CMakeFiles/Narcissistic_lib.dir/Narcissistic.cpp.o
+/usr/bin/ranlib libNarcissistic_lib.a

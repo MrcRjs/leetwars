@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Google_Tests_run.dir/narcissisticTest.cpp.o  -o Google_Tests_run ../Narcissistic_lib/libNarcissistic_lib.a lib/libgtest.a lib/libgtest_main.a lib/libgtest.a -lpthread 
