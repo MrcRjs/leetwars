@@ -1,0 +1,3 @@
+/home/mrcrjs/PycharmProjects/codewars/medianTwoSortedArrays/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/mrcrjs/PycharmProjects/codewars/medianTwoSortedArrays/cmake-build-debug/CMakeFiles/untitled.dir
+/home/mrcrjs/PycharmProjects/codewars/medianTwoSortedArrays/cmake-build-debug/CMakeFiles/edit_cache.dir
