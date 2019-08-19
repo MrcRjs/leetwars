@@ -6,19 +6,18 @@ class ListNode:
 
 class Solution:
 	def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
-		currentL1 = l1
-		currentL2 = l2
 
 		result = ListNode(0)
 
 		currentResult = result
 
-		while currentL1 is not None or currentL2 is not None:
-			if currentL2 is None or currentL1.val <= currentL2.val:
-				currentResult.next = ListNode(currentL1.val)
-				currentL1 = currentL1.next
+		while l1 is not None or l2 is not None:
+			if l2 is None or (l1 is not None and l1.val <= l2.val):
+				currentResult.next = ListNode(l1.val)
+				l1 = l1.next
 			else:
-				currentResult.next = ListNode(currentL2.val)
+				currentResult.next = ListNode(l2.val)
+				l2 = l2.next
 			currentResult = currentResult.next
 
 		return result.next
