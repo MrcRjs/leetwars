@@ -6,27 +6,21 @@ class ListNode:
 
 class Solution:
 	def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
-		if l1 and l2 is not None
-		if l2.val < l1.val:
-			temp: ListNode = l1
-			l1 = l2
-			l2 = temp
 
-		start = l1
+		result = ListNode(0)
 
-		while l1.next is not None:
-			while l1.next is not None and l1.next.val <= l2.val:
+		currentResult = result
+
+		while l1 is not None or l2 is not None:
+			if l2 is None or (l1 is not None and l1.val <= l2.val):
+				currentResult.next = ListNode(l1.val)
 				l1 = l1.next
+			else:
+				currentResult.next = ListNode(l2.val)
+				l2 = l2.next
+			currentResult = currentResult.next
 
-			if l1.next is None and l2 is not None:
-				l1.next = l2
-				break
-			temp = l1.next
-			l1.next = l2
-			l1 = l1.next
-			l2 = temp
-
-		return start
+		return result.next
 
 
 if __name__ == '__main__':
@@ -37,14 +31,7 @@ if __name__ == '__main__':
 	n1.next = n2
 	n2.next = n3
 
-	n4 = ListNode(1)
-	n5 = ListNode(2)
-	n6 = ListNode(3)
-
-	n4.next = n5
-	n5.next = n6
-
-	s1 = Solution().mergeTwoLists(n1, n4)
+	s1 = Solution().mergeTwoLists(n1, n1)
 
 	node = s1
 	while node is not None:
