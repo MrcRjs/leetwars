@@ -1,3 +1,6 @@
+import sentry_sdk
+import os
+
 class ListNode:
 	def __init__(self, x):
 		self.val = x
@@ -24,6 +27,8 @@ class Solution:
 
 
 if __name__ == '__main__':
+	sentry_sdk.init(os.environ['SENTRYPYTHON'])
+
 	n1 = ListNode(1)
 	n2 = ListNode(2)
 	n3 = ListNode(3)
