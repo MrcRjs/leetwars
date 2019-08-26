@@ -1,7 +1,7 @@
 import unittest
 from reverse import Solution
 
-b32 = (2 ** 32)
+b32 = (2 ** 31)
 
 
 class ReverseTest(unittest.TestCase):
