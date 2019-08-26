@@ -2,7 +2,7 @@ class Solution:
     @staticmethod
     def reverse(x: int) -> int:
         b32 = (2 ** 31)
-        print(b32, x)
+
         if (b32 * -1) <= x <= b32:
             print(x)
             if x > 0:
