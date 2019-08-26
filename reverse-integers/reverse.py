@@ -4,7 +4,6 @@ class Solution:
         b32 = (2 ** 31)
 
         if (b32 * -1) <= x <= b32:
-            print(x)
             if x > 0:
                 numStr = str(x)
                 return int(numStr[::-1])
