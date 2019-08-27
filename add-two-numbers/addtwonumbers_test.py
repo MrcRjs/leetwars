@@ -14,6 +14,13 @@ class TestNumbers(unittest.TestCase):
         l2.next = l3
         self.assertEqual(Solution.listNodeToNum(l1), 321)
 
+
+    def test_numToListNode(self):
+        self.assertEqual(Solution.numToListNode(34).__str__(), "4 -> 3 -> None")
+
+    def test_numToListNodeLarge(self):
+        self.assertEqual(Solution.numToListNode(4820).__str__(), "0 -> 2 -> 8 -> 4 -> None")
+
     def test_sumLists(self):
         l0 = ListNode(0)
         l1 = ListNode(2)
@@ -29,12 +36,6 @@ class TestNumbers(unittest.TestCase):
         sum = Solution.listNodeToNum(Solution.addTwoNumbers(l0, l2))
 
         self.assertEqual(sum, 42)
-
-    def test_numToListNode(self):
-        self.assertEqual(Solution.numToListNode(34).__str__(), "4 -> 3 -> None")
-
-    def test_numToListNodeLarge(self):
-        self.assertEqual(Solution.numToListNode(4820).__str__(), "0 -> 2 -> 8 -> 4 -> None")
 
 
 if __name__ == '__main__':

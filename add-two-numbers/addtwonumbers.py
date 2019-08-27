@@ -10,7 +10,7 @@ class ListNode:
 class Solution:
     @staticmethod
     def addTwoNumbers(l1: ListNode, l2: ListNode) -> ListNode:
-        return ListNode(3)
+        return Solution.numToListNode(Solution.listNodeToNum(l1) + Solution.listNodeToNum(l2))
 
     @staticmethod
     def listNodeToNum(ln: ListNode) -> int:
