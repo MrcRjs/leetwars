@@ -33,7 +33,8 @@ class TestNumbers(unittest.TestCase):
         # 2 -> 2 -> None | int 22
         l2.next = l3
 
-        sum = Solution.listNodeToNum(Solution.addTwoNumbers(l0, l2))
+        solution = Solution()
+        sum = Solution.listNodeToNum(solution.addTwoNumbers(l0, l2))
 
         self.assertEqual(sum, 42)
 

@@ -8,8 +8,7 @@ class ListNode:
 
 
 class Solution:
-    @staticmethod
-    def addTwoNumbers(l1: ListNode, l2: ListNode) -> ListNode:
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         return Solution.numToListNode(Solution.listNodeToNum(l1) + Solution.listNodeToNum(l2))
 
     @staticmethod
