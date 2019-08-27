@@ -30,6 +30,8 @@ class TestNumbers(unittest.TestCase):
 
         self.assertEqual(sum, 42)
 
+    def test_numToListNode(self):
+        self.assertEqual(Solution.numToListNode(34).__str__(), "4 -> 3 -> None")
 
 if __name__ == '__main__':
     unittest.main()
