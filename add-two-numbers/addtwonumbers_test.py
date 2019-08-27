@@ -14,6 +14,22 @@ class TestNumbers(unittest.TestCase):
         l2.next = l3
         self.assertEqual(Solution.listNodeToNum(l1), 321)
 
+    def test_sumLists(self):
+        l0 = ListNode(0)
+        l1 = ListNode(2)
+        l2 = ListNode(2)
+        l3 = ListNode(2)
+
+        # 0 -> 2 -> None | int 20
+        l0.next = l1
+
+        # 2 -> 2 -> None | int 22
+        l2.next = l3
+
+        sum = Solution.listNodeToNum(Solution.addTwoNumbers(l0, l2))
+
+        self.assertEqual(sum, 42)
+
 
 if __name__ == '__main__':
     unittest.main()
