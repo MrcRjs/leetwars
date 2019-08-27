@@ -33,5 +33,9 @@ class TestNumbers(unittest.TestCase):
     def test_numToListNode(self):
         self.assertEqual(Solution.numToListNode(34).__str__(), "4 -> 3 -> None")
 
+    def test_numToListNodeLarge(self):
+        self.assertEqual(Solution.numToListNode(4820).__str__(), "0 -> 2 -> 8 -> 4 -> None")
+
+
 if __name__ == '__main__':
     unittest.main()

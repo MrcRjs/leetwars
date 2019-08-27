@@ -2,8 +2,10 @@ class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
+
     def __str__(self):
-        return str(self.val)+ ' -> ' + str(self.next)
+        return str(self.val) + ' -> ' + str(self.next)
+
 
 class Solution:
     @staticmethod
@@ -21,4 +23,20 @@ class Solution:
             result += ln.val * pow(10, nodePower)
             nodePower += 1
             ln = ln.next
+        return result
+
+    @staticmethod
+    def numToListNode(num: int) -> ListNode:
+
+        numStrReversed = str(num)[::-1]
+
+        # Create First Node
+        node = ListNode(int(numStrReversed[0]))
+
+        result = node
+        # Create List Node
+        for c in numStrReversed[1:]:
+            node.next = ListNode(int(c))
+            node = node.next
+
         return result
