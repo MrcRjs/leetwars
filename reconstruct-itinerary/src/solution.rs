@@ -10,7 +10,13 @@ pub fn find_itinerary(tickets: Vec<Vec<String>>) -> Vec<String> {
     //      lastAirport = tickets[ticketIndex].1
     //      remove tickets[ticketIndex]
     //      push lastAirport to resultArray
-    let mut lastAirport = "JFK";
-    while tickets.len() > 0 {}
+
+    let mut lastAirport = String::from("JFK");
+    while tickets.len() > 0 {
+        let mut idx = 0;
+        while lastAirport != {
+
+        }
+    }
     vec![String::from("JFK"), String::from("MUC"), String::from("LHR")]
 }
