@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/remove_element.dir/main.cpp.o  -o remove_element 
