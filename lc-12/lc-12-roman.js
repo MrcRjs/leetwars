@@ -8,8 +8,8 @@ var intToRoman = function(num) {
 //const skip = [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 const skip = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-const tests = [3, 58, 1993];
-const expect = ["III", "LVIII", "MCMXCIV"];
+const tests = [3, 4, 58, 1993];
+const expect = ["III", "IV", "LVIII", "MCMXCIV"];
 
 tests.forEach((t, idx) => {
     if (!skip[idx]) {
