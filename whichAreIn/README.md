@@ -12,7 +12,9 @@ a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
 
 returns ["arp", "live", "strong"]
 
-#Example 2: a1 = ["tarp", "mice", "bull"]
+# Example 2:
+
+a1 = ["tarp", "mice", "bull"]
 
 a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
 
