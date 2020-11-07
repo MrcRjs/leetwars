@@ -53,10 +53,7 @@ function isValid(arr) {
             // The array is INVALID
             return false;
         }
-        // Only push numbers
-        if (element !== ".") {
-            values.push(element);
-        }
+        values.push(element);
     }
 
 
@@ -64,11 +61,11 @@ function isValid(arr) {
 }
 
 function getColumn(board, i) {
-    return board.map(row => row[i]);
+    return board.map(row => row[i]).filter( n => n !== ".");
 };
 
 function getRow(board, i) {
-    return board[i];
+    return board[i].filter( n => n !== ".");
 };
 
 function get3by3(board, i) {
@@ -99,7 +96,7 @@ function get3by3(board, i) {
     const br = board[c[0] + 1][c[1] + 1];
     
     const b3x3 = [tl, t, tr, l, ct, r, bl, b, br];
-    return b3x3;
+    return b3x3.filter( n => n !== ".");
 
 };
 
