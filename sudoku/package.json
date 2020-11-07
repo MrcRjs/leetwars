@@ -1,0 +1,14 @@
+{
+  "name": "validsudoku",
+  "version": "1.0.0",
+  "description": "",
+  "main": "validSudoku.js",
+  "scripts": {
+    "test": "mocha *.test.js --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^8.2.1"
+  }
+}
