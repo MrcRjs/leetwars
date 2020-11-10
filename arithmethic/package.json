@@ -1,0 +1,15 @@
+{
+  "name": "arithmetic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "arith.js",
+  "scripts": {
+    "debug": "node --inspect arith.js",
+    "test": "mocha *.test.js --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^8.2.1"
+  }
+}
