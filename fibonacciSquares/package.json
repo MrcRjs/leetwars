@@ -1,0 +1,14 @@
+{
+  "name": "fibonacci-squares",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fibonacciSquares.js",
+  "scripts": {
+    "test": "mocha *.test.js --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^8.2.1"
+  }
+}
