@@ -1,0 +1,14 @@
+{
+  "name": "wholikesthis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "wholikesthis.js",
+  "scripts": {
+    "test": "mocha *.test.js --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^8.2.1"
+  }
+}
