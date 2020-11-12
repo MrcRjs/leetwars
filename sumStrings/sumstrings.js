@@ -25,7 +25,7 @@ function sumStrings(a, b) {
     }
   }
 
-  return `${r?r:''}${sum.reverse().join('')}`;
+  return `${r ? r : ''}${sum.reverse().join('')}`;
 }
 
 function cleanLeftZeros(n) {
