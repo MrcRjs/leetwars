@@ -1,13 +1,13 @@
 [A Chain adding function](https://www.codewars.com/kata/539a0e4d85e3425cb0000a88/javascript)
 ===========
 
-
 We want to create a function that will add numbers together when called in succession.
 
 ```
 add(1)(2);
 // returns 3
 ```
+
 
 We also want to be able to continue to add numbers to our chain.
 
