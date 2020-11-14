@@ -5,7 +5,7 @@ For a given chemical formula represented by a string, count the number of atoms 
 
 For example:
 
-```
+```javascript
 var water = 'H2O';
 parseMolecule(water); // return {H: 2, O: 1}
 
