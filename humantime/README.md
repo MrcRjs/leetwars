@@ -1,4 +1,4 @@
-Human readable duration format
+[Human readable duration format](https://www.codewars.com/kata/52742f58faf5485cae000b9a/javascript)
 ======
 
 Your task in order to complete this Kata is to write a function which formats a duration, given as a number of seconds, in a human-friendly way.
