@@ -1,33 +1,36 @@
-var catInstances = [];
-
 var Cat = (
     function () {
-        return function (name, weight) {
+        let averageTracker = {
+            catCount: 0,
+            avgWeight: 0,
+            totalWeight: 0
+        }
+        function constructor(name, weight) {
             
             if (!name || !weight) {
                 throw new Error('Missing name or weight')
             }
+            averageTracker.catCount++;
 
-            var w = 0;
             Object.defineProperty(this, 'weight', {
-                get() { return w; },
+                get() { return this._weight || 0; },
                 set(newW) {
-                    w = newW;
+                    averageTracker.totalWeight = averageTracker.totalWeight - this.weight + newW,
+                    averageTracker.avgWeight = averageTracker.totalWeight / averageTracker.catCount
+                    return this._weight = newW; 
                 }
             });
-
             this.name =  name;
-            this.weight = weight;
-            catInstances.push(this);
-            
+            this.weight = weight;            
         }
+        
+        constructor.averageWeight = function () {
+            return averageTracker.avgWeight;
+        }
+        
+        return constructor;
     }()
 );
-
-Cat.averageWeight = function () {
-    return  (catInstances.map(c => c.weight).reduce((ac, w) => ac + w)) / catInstances.length;
-}
-
 
 module.exports = { Cat };
 
