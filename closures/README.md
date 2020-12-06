@@ -26,8 +26,8 @@ Cat.averageWeight(); // now 25
 Finally, since average weight is an aggregate statistic it's important that we validate constructor arguments so that no cats are created without a specified weight; so, make sure to throw an error if both arguments are not recieved by the constructor.
 Summary of requirements:
 
-    1. `Cat` constructor, requiring arguments for name and weight
-    2. `Throw` an error if name or weight not specified when invoking the constructor.
-    3. `Cat.averageWeight()` method should give the average weight of all cat instances created with Cat, even after if the instance's properties have changed.
-    4. Must use `Object.defineProperty`
+1. `Cat` constructor, requiring arguments for name and weight
+2. `Throw` an error if name or weight not specified when invoking the constructor.
+3. `Cat.averageWeight()` method should give the average weight of all cat instances created with Cat, even after if the instance's properties have changed.
+4. Must use `Object.defineProperty`
 
