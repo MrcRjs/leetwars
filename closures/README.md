@@ -24,7 +24,9 @@ Cat.averageWeight(); // now 25
 `Object.defineProperty` must be used to pass all tests. Storing a reference to all instances and recalculating the average weight each time is easier, but would prevent garbage collection from working properly if used in a production environment.
 
 Finally, since average weight is an aggregate statistic it's important that we validate constructor arguments so that no cats are created without a specified weight; so, make sure to throw an error if both arguments are not recieved by the constructor.
-Summary of requirements:
+
+
+### Summary of requirements:
 
 1. `Cat` constructor, requiring arguments for name and weight
 2. `Throw` an error if name or weight not specified when invoking the constructor.
