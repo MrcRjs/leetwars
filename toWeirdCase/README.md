@@ -5,6 +5,7 @@ Write a function toWeirdCase (weirdcase in Ruby) that accepts a string, and retu
 
 The passed in string will only consist of alphabetical characters and spaces(' '). Spaces will only be present if there are multiple words. Words will be separated by a single space(' ').
 
+
 ### Examples:
 
 ```javascript
