@@ -1,0 +1,17 @@
+{
+  "name": "plusone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "mocha *.test.js --watch"
+  },
+  "author": {
+    "name": "Marco Rojas",
+    "email": "devmarcorojas@gmail.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^8.2.1"
+  }
+}
