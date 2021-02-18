@@ -1,20 +1,13 @@
 function getpins (observed) {
-
     const digits = observed.split("");
 
-    const allNums = new Set();
-    for (const d of digits) {
-        const adj = getAdjacent(parseInt(d));
-        for(const a of adj){
-            allNums.add(a)
-        }
-    }
-
     if(digits.length === 1) {
-        return Array.from(allNums)
+        return getAdjacent(parseInt(digits[0]))
     }
 
-    const allPins = getCombinations(Array.from(allNums));
+    const allNums = digits.map(d => getAdjacent(parseInt(d)));
+
+    const allPins = getCombinations(allNums);
 
     return Array.from(allPins);
 
@@ -23,14 +16,19 @@ function getpins (observed) {
 function getCombinations(arr) {
     let combs = new Set();
 
-    const ct = new Counter(arr.length);
+    let allBases = arr.map(a => a.length);
 
+    const ct = new Counter(allBases);
 
     let count = ct.getCount();
     let i = 0;
-    while(count && i < 100)
+    // prevent infinite loop
+    while(count && i < 1000)
     {
-        const comb = count.map(c => arr[c]).join('');
+        let comb = '';
+        count.forEach((c, i) => {
+            comb += arr[i][c];
+        });
         combs.add(comb); 
         count = ct.increment();
         i++;
@@ -55,9 +53,10 @@ function getAdjacent(num) {
 }
 
 class Counter {
-    constructor(len) {
-        this.counter = new Array(len - 1).fill(0);
-        this.base = len;
+    constructor(arr) {
+        // We are gonna use an arr with a different base for each element
+        this.counter = new Array(arr.length).fill(0);
+        this.bases = arr;
     }
     getCount() {
         return this.counter;
@@ -66,11 +65,12 @@ class Counter {
         let inc = 1;
         let  i = this.counter.length - 1;
         while(inc && i >= 0) {
-            if(i === 0 && this.counter[0] === this.base - 1){
+            const base = this.bases[i];
+            if(i === 0 && this.counter[0] === base - 1){
                 // last element
                 return null;
             }
-            else if(this.counter[i] === this.base - 1) {
+            else if(this.counter[i] === base - 1) {
                 this.counter[i] = 0;
                 i--;
             } else {
@@ -80,8 +80,20 @@ class Counter {
         }
         return this.counter;
     }
-
 }
+
+/* 
+observed = "11"
+observed.split('') // 1.- [1,1]
+      .map(d => adjacent[d|0]) // 2.- [[1,2,4],[1,2,4]]
+      .reduce((pa, da) => { 
+        return da.reduce((pv, d) => {
+            console.log(pv)
+          return pv.concat(pa.map( p  => '' + p + d)); // 3.- 
+        }, []);
+      }, ['']);
+
+*/
 
 module.exports = { getpins };
 
