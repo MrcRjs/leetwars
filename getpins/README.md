@@ -25,3 +25,19 @@ Can you help us to find all those variations? It would be nice to have a functio
 Detective, we are counting on you!
 
 For C# user: Do not use Mono. Mono is too slower when run your code.
+
+Study:
+```
+/* 
+observed = "11"
+observed.split('') // 1.- [1,1]
+      .map(d => adjacent[d|0]) // 2.- [[1,2,4],[1,2,4]]
+      .reduce((pa, da) => { 
+        return da.reduce((pv, d) => {
+            console.log(pv)
+          return pv.concat(pa.map( p  => '' + p + d)); // 3.- 
+        }, []);
+      }, ['']);
+
+*/
+```

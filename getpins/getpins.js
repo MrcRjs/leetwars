@@ -1,7 +1,7 @@
-function getpins (observed) {
+function getpins(observed) {
     const digits = observed.split("");
 
-    if(digits.length === 1) {
+    if (digits.length === 1) {
         return getAdjacent(parseInt(digits[0]))
     }
 
@@ -23,13 +23,12 @@ function getCombinations(arr) {
     let count = ct.getCount();
     let i = 0;
     // prevent infinite loop
-    while(count && i < 1000)
-    {
+    while (count && i < 1000) {
         let comb = '';
         count.forEach((c, i) => {
             comb += arr[i][c];
         });
-        combs.add(comb); 
+        combs.add(comb);
         count = ct.increment();
         i++;
     }
@@ -39,15 +38,15 @@ function getCombinations(arr) {
 function getAdjacent(num) {
     const adjacents = [
         ["0", "8"],
-        ["1", "2","4"],
-        ["2", "1","5","3"],
-        ["3", "2","6"],
-        ["4", "1","5","7"],
-        ["5", "2","4","6","8"],
-        ["6", "3","5","9"],
-        ["7", "4","8"],
-        ["8", "0","5","7","9"],
-        ["9", "6","8"]
+        ["1", "2", "4"],
+        ["2", "1", "5", "3"],
+        ["3", "2", "6"],
+        ["4", "1", "5", "7"],
+        ["5", "2", "4", "6", "8"],
+        ["6", "3", "5", "9"],
+        ["7", "4", "8"],
+        ["8", "0", "5", "7", "9"],
+        ["9", "6", "8"]
     ]
     return adjacents[num];
 }
@@ -63,14 +62,14 @@ class Counter {
     }
     increment() {
         let inc = 1;
-        let  i = this.counter.length - 1;
-        while(inc && i >= 0) {
+        let i = this.counter.length - 1;
+        while (inc && i >= 0) {
             const base = this.bases[i];
-            if(i === 0 && this.counter[0] === base - 1){
+            if (i === 0 && this.counter[0] === base - 1) {
                 // last element
                 return null;
             }
-            else if(this.counter[i] === base - 1) {
+            else if (this.counter[i] === base - 1) {
                 this.counter[i] = 0;
                 i--;
             } else {
@@ -82,18 +81,4 @@ class Counter {
     }
 }
 
-/* 
-observed = "11"
-observed.split('') // 1.- [1,1]
-      .map(d => adjacent[d|0]) // 2.- [[1,2,4],[1,2,4]]
-      .reduce((pa, da) => { 
-        return da.reduce((pv, d) => {
-            console.log(pv)
-          return pv.concat(pa.map( p  => '' + p + d)); // 3.- 
-        }, []);
-      }, ['']);
-
-*/
-
 module.exports = { getpins };
-
