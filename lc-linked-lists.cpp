@@ -12,14 +12,14 @@
 class Solution {
 public:
     ListNode* removeElements(ListNode* head, int val) {
-        
-        
+
+
         // #1 Head is equal to val
         // Remove Head: head gets assigned head.next
         while(head && head->val == val) {
             head = head->next;
         }
-        
+
         if(head) {
             // #2 Next is equal to val
             ListNode* current = head;
@@ -31,7 +31,7 @@ public:
                 }
             }
         }
-        
-        return head;        
+
+        return head;
     }
 };
