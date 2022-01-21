@@ -6,7 +6,7 @@ public:
         int pivot;
         while(left <= right) {
             pivot = ((right - left) >> 1) + left;
-            
+
             if(nums[pivot] == target)
             {
                 return pivot;
@@ -15,7 +15,7 @@ public:
                 right = pivot -1;
             } else {
                 left = pivot + 1;
-            }    
+            }
         }
         return left;
     }
