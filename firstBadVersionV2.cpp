@@ -10,16 +10,16 @@ public:
         while(left < right) {
             pivot = ((right - left) >> 1) + left;
             // Its on the left side, we reduce right
-            if(isBadVersion(pivot)) { 
+            if(isBadVersion(pivot)) {
                 right = pivot;
             }
             // Its on the right side we reduce left
             else {
                 left = pivot + 1;
             }
-            
+
         }
-        
+
         return left;
     }
 };
