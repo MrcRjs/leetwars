@@ -8,10 +8,10 @@ public:
         while(left <= right) {
             // Size of nums divided by 2
             pivot = ((right - left) >> 1) + left;
-            if(nums[pivot] == target) { 
+            if(nums[pivot] == target) {
                 return pivot;
             }
-             // left
+            // left
             else if(nums[pivot] > target) {
                 right = pivot - 1;
             }
