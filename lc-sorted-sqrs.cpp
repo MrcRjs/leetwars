@@ -2,7 +2,7 @@
 class Solution {
 public:
     vector<int> sortedSquares(vector<int>& nums) {
-                
+
         int total = nums.size();
         vector<int> res(total);
         int left = 0;
