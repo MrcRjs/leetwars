@@ -11,11 +11,11 @@ public:
 
         std::vector <int> result;
         for(int i = 1; i < n; i++) {
-            if(!existingNums[i]){
+            if(!existingNums[i]) {
                 result.push_back(i);
             }
         }
-        
+
         return result;
     }
 };
