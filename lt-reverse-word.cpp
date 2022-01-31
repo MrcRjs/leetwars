@@ -3,7 +3,7 @@ public:
     string reverseWords(string s) {
         int n = s.size();
         int wordStart = 0;
-        for(int i = 0; i < n; i++){
+        for(int i = 0; i < n; i++) {
             // if current char is a space
             if(s.at(i) == ' ') {
                 string reversed = reverseString(s.substr(wordStart, i - wordStart));
@@ -17,7 +17,7 @@ public:
         }
         return s;
     }
-    
+
     string reverseString(string s) {
         int n = s.size() - 1;
         for(int i = 0; i <= n / 2; i++) {
