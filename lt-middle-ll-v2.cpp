@@ -10,14 +10,14 @@
  */
 class Solution {
 public:
-    ListNode* middleNode(ListNode* head) {
-        ListNode * middle = head;
-        ListNode * current = head;
-        while(current != NULL && current->next != NULL) {
-            middle = middle->next;
-            current = current->next->next;
-        }
-
-        return middle;
+  ListNode *middleNode(ListNode *head) {
+    ListNode *middle = head;
+    ListNode *current = head;
+    while (current != NULL && current->next != NULL) {
+      middle = middle->next;
+      current = current->next->next;
     }
+
+    return middle;
+  }
 };
