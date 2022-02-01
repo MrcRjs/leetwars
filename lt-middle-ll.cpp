@@ -13,14 +13,14 @@ public:
     ListNode* middleNode(ListNode* head) {
         int n = 1;
         ListNode * it = head;
-        while(it->next){
+        while(it->next) {
             it = it->next;
             n++;
             // std::cout << n << std::endl;
         }
-        
+
         it = head;
-        for(int i = 0; i < n / 2; i++){
+        for(int i = 0; i < n / 2; i++) {
             it = it->next;
         }
         return it;
