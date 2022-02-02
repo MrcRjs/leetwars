@@ -11,27 +11,26 @@
  */
 class Solution {
 public:
-    ListNode* removeElements(ListNode* head, int val) {
-        
-        
-        // #1 Head is equal to val
-        // Remove Head: head gets assigned head.next
-        while(head && head->val == val) {
-            head = head->next;
-        }
-        
-        if(head) {
-            // #2 Next is equal to val
-            ListNode* current = head;
-            while(current && current->next) {
-                if(current->next->val == val) {
-                    current->next = current->next->next;
-                } else {
-                    current = current->next;
-                }
-            }
-        }
-        
-        return head;        
+  ListNode *removeElements(ListNode *head, int val) {
+
+    // #1 Head is equal to val
+    // Remove Head: head gets assigned head.next
+    while (head && head->val == val) {
+      head = head->next;
     }
+
+    if (head) {
+      // #2 Next is equal to val
+      ListNode *current = head;
+      while (current && current->next) {
+        if (current->next->val == val) {
+          current->next = current->next->next;
+        } else {
+          current = current->next;
+        }
+      }
+    }
+
+    return head;
+  }
 };
