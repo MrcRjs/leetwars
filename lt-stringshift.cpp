@@ -1,38 +1,23 @@
 class Solution {
 public:
     string stringShift(string s, vector<vector<int>>& shift) {
-
-        if(shift.size() == 0) {
-            return s;
-        }
-        
-        int totalShift = 0;
-        for(auto sh: shift){
-            if(sh[0] == 0) {
-                totalShift -= sh[1];
-            } else {
-                totalShift += sh[1];
+        int clockwise = 0;
+        for (auto move : shift) {
+            if(move[0] == 1){
+                move[1] = -move[1];
             }
+            clockwise += move[1];
         }
-
-        cout << totalShift << endl;
-        if(totalShift % s.size() == 0) {
+        if(clockwise == 0){
             return s;
         }
-        
-        // shift right
-        else if(totalShift > 0) {
-            int totalMove = totalShift % s.size();
-            return s.substr(s.size() - totalMove) + s.substr(0, s.size() - totalMove);
+        else if(clockwise > 0){
+            clockwise = clockwise % s.length();
+            return s.substr(clockwise) + s.substr(0, clockwise);
         }
-        
-        // shift left
-        else if(totalShift < 0){
-            int totalMove = (-totalShift) % s.size();
-            cout << "left "<< totalMove << endl;
-            return  s.substr(totalMove) + s.substr(0, totalMove);
+        else {
+            clockwise = abs(clockwise) % s.length();
+            return  s.substr(s.length() - clockwise) + s.substr(0, s.length() - clockwise);
         }
-        
-        return s;
     }
 };
