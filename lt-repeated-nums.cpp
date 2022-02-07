@@ -8,7 +8,7 @@ public:
         nums[cur] = cur;
         return store(nums, nxt);
     }
-    
+
     int findDuplicate(vector<int>& nums) {
         return store(nums, 0);
     }
