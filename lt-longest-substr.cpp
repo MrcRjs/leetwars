@@ -7,7 +7,7 @@ public:
         }
 
         int left = 0
-        int right = 0;
+                   int right = 0;
         map<char, int> hashmap;
         int maxLen = 2;
         while (right < n) {
