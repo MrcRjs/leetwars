@@ -9,17 +9,17 @@ public:
         }
         int start = 0;
         int end = 0;
-        
+
         for(int i = 0; i < s.size(); i++) {
             // Verify centers of 1 and 2 letters, expand
             int singleC = expandCenter(s, i, i);
             int doubleC = expandCenter(s, i, i + 1);
-            if(maxLen > end - start){
+            if(maxLen > end - start) {
                 start = i - (maxLen - 1) / 2;
                 end = i + maxLen / 2;
             }
         }
-        
+
         return s.substr(start, end - start + 1);
     }
 private:
@@ -30,7 +30,7 @@ private:
             L--;
             R++;
         }
-        
+
         return R - L - 1;
     }
 };
