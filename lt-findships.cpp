@@ -10,11 +10,11 @@
 class Solution {
 public:
     int countShips(Sea sea, vector<int> topRight, vector<int> bottomLeft) {
-        
+
         if (bottomLeft[0] > topRight[0] || bottomLeft[1] > topRight[1]) {
             return 0;
         }
-        
+
         if (!sea.hasShips(topRight, bottomLeft)) {
             return 0;
         }
