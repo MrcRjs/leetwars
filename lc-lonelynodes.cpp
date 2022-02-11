@@ -23,23 +23,23 @@ public:
         while (nodeQ.size()) {
             TreeNode * current = nodeQ.front();
             nodeQ.pop();
-            
+
             if (hasSingleChild(current)) {
                 lonelynodes.push_back(getSingleChild(current)->val);
             }
-            
+
             if (current->left) {
                 nodeQ.push(current->left);
             }
-            
+
             if (current->right) {
                 nodeQ.push(current->right);
             }
         };
-        
+
         return lonelynodes;
     }
-    
+
 };
 
 bool Solution::hasSingleChild(TreeNode *root) {
